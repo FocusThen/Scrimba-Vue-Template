@@ -1,25 +1,29 @@
+const { VueLoaderPlugin } = require("vue-loader");
 module.exports = {
-  "output": {
-    "filename": "[name].pack.js"
+  mode: "development",
+  output: {
+    filename: "[name].pack.js",
   },
-  "entry": {
-    "index": "./index"
+  entry: {
+    index: "./index",
   },
-  "module": {
-    "rules": [
+  resolve: {
+    alias: {
+      vue$: "vue/dist/vue.esm.js",
+    },
+    extensions: ["*", ".js", ".vue", ".json"],
+  },
+  module: {
+    rules: [
       {
-        "use": {
-          "loader": "babel-loader",
-          "options": {
-            "presets": [
-              "babel-preset-env",
-              "babel-preset-react"
-            ]
-          }
-        },
-        "exclude": /node_modules/,
-        "test": /\.js$/
-      }
-    ]
-  }
+        test: /\.vue$/,
+        use: "vue-loader",
+      },
+      {
+        test: /\.js$/,
+        use: "babel-loader",
+      },
+    ],
+  },
+  plugins: [new VueLoaderPlugin()],
 };
