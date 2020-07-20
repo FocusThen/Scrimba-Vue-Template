@@ -30,5 +30,6 @@ in a while. So if you've ever wanted to "give back" to Scrimba, you can do that 
 	It would also mean the world to us if you share the courses.  
 
 Happy Coding! 🥳
+### [this link Scrimba playground](https://scrimba.com/c/cMZy9vu2)
 
-you can find me in [Scrimba Discord](https://discord.gg/mF6PcNU)! 😎
+### You can find me in [Scrimba Discord](https://discord.gg/mF6PcNU)! 😎
